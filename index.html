@@ -1,214 +1,373 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>여의도 노래방 내돈내산 | 로컬 브로가 밝히는 투명한 비즈니스 노래방 리얼 리포트</title>
+  <meta name="description" content="금융의 중심 여의도역 및 샛강역 인근 노래방을 찾는 형님들을 위한 10년 차 로컬 자영업자의 100% 내돈내산 검증 리뷰. 바가지 없는 정찰제 주대 및 예약 꿀팁 제공.">
+  <meta name="keywords" content="여의도 노래방 내돈내산, 여의도 노래방 가격, 여의도 비즈니스 노래방, 샛강역 노래방 추천, 여의도 2차 회식">
+  <meta name="bpaas-design-system" content="midnight-glass">
+  <meta name="bpaas-design-theme" content="kr-ocean">
+  <link rel="canonical" href="https://t3b05-yd-kb-real.pages.dev">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="여의도 노래방 내돈내산 | 로컬 브로의 정찰제 가이드">
+  <meta property="og:description" content="금융의 중심 여의도역 및 샛강역 인근 노래방을 찾는 형님들을 위한 10년 차 로컬 자영업자의 100% 내돈내산 검증 리뷰. 바가지 없는 정찰제 주대 및 예약 꿀팁 제공.">
+  <meta property="og:url" content="https://t3b05-yd-kb-real.pages.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+      --bg-primary: #090d16;
+      --bg-secondary: #111827;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --text-main: #f3f4f6;
+      --text-sub: #9ca3af;
+      --border-color: rgba(56, 189, 248, 0.2);
+      --font-family: 'Inter', 'Noto Sans KR', sans-serif;
     }
+    
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.7;
     }
+    
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    header .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.05em;
+    }
+    .logo span { color: var(--accent); }
+    
+    nav { display: flex; gap: 24px; }
+    nav a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--accent); }
+    
+    /* Hero */
+    .hero-sec {
+      padding: 100px 0 80px 0;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .hero-sec h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .hero-sec p {
+      font-size: 1.1rem;
+      color: var(--text-sub);
+      max-width: 700px;
+      margin: 0 auto 24px auto;
+    }
+    
+    .phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, var(--accent), #0284c7);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 1.15rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+      transition: all 0.3s;
+    }
+    
+    .phone-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.6);
+    }
+    
+    /* Content */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
       padding: 60px 0;
     }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
+    
+    .main-text {
       font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
+      color: #e5e7eb;
     }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
+    
+    .main-text h2 {
+      font-size: 1.8rem;
+      color: #fff;
       margin-top: 40px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
     }
-    .grid-title {
-      font-size: 0.85rem;
+    
+    .main-text p {
+      margin-bottom: 20px;
+    }
+    
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+    
+    .price-table th, .price-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .price-table th {
+      background: rgba(56, 189, 248, 0.1);
+      color: #fff;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
     }
-    .posts-list {
+    
+    /* Sidebar */
+    .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 30px;
     }
-    .post-card {
+    
+    .widget {
+      background: var(--bg-secondary);
       border: 1px solid var(--border-color);
+      border-radius: 12px;
       padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
     }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
+    
+    .widget-title {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 16px;
+      font-weight: 700;
     }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+    
+    /* Reviews */
+    .review-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
     }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
+    
+    .review-header {
       display: flex;
       justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
+      margin-bottom: 8px;
     }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
+    
+    .reviewer-name { font-weight: 700; font-size: 0.9rem; }
+    .review-stars { color: #fbbf24; }
+    .review-content { font-size: 0.88rem; color: var(--text-sub); }
+    
+    /* Footer */
+    footer {
+      background: #05070c;
+      border-top: 1px solid var(--border-color);
+      padding: 48px 0;
+      color: var(--text-sub);
+      font-size: 0.9rem;
+    }
+    
+    footer .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .hero-sec h1 { font-size: 2rem; }
+      nav { display: none; }
     }
   </style>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "여의도 노래방 내돈내산",
+    "description": "금융 중심지 여의도에서 로컬 브로가 직접 다녀보고 작성한 투명 정찰제 비즈니스 노래방 실시간 예약 매칭.",
+    "telephone": "010-6279-0862",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "서울시 영등포구 여의도동"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
+
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">YEOUIDO<span>KARAOKE</span></a>
+      <nav>
+        <a href="/">홈</a>
+        <a href="about.html">소개</a>
+        <a href="blog.html">블로그</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-sec">
+    <div class="container">
+      <div style="display:inline-block; font-size:0.75rem; letter-spacing:0.3em; color:var(--accent); font-family:monospace; margin-bottom:16px; text-transform:uppercase">// YEOUIDO DIRECT INSIDER</div>
+      <h1>여의도 노래방 내돈내산</h1>
+      <p>여의도 금융단지 회식 2차 고민 해결! 10년 차 로컬 브로가 내돈내산으로 겪은 리얼 후기와 눈탱이 전혀 없는 투명 정찰제 주대 가이드라인을 제공합니다.</p>
+      <a href="tel:010-6279-0862" class="phone-btn">
+        <span>📞 VIP 예약 문의: 010-6279-0862</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="container content-grid">
+    <main class="main-text">
+      <h2>금융의 메카 여의도, 2차 눈탱이 피하는 솔직 비결</h2>
+      <p>어서 와라 형님들! 이 근처 영등포와 여의도 일대에서 사업도 굴리고 장사도 해오면서 잔뼈가 굵은 로컬 브로다. 솔직히 여의도 상권은 주식, 금융, 대기업 본사가 빽빽이 밀집해 있어서 접대나 비즈니스 술자리가 서울에서 가장 빈번하게 일어나는 핫플이다. 여의도역이나 샛강역 고깃집에서 1차로 기분 좋게 법인카드로 마신 뒤, 2차 갈 곳을 급하게 찾는데 네이버 검색하면 죄다 영혼 없는 바이럴 광고대행사 광고뿐이다.</p>
+      
+      <p>거기 적힌 허위 저가 주대만 믿고 무작정 바이어 모시고 갔다가, 계산서에 잡다한 음료수 세팅비, 과도한 룸 연장비, 강제 서비스 팁 따위가 붙어서 몇십만 원 더 긁히는 황당한 상황을 나도 무수히 겪어봤다. 기분 좋게 쏘고도 바보 되는 그 찜찜한 경험은 겪어본 형님들만 공감할 거다. 그래서 내가 여의도에서 내돈내산으로 직접 수십 번 굴러보면서 다듬어 낸 "정직한 정찰제 주대만 청구하는 리얼 고품격 비즈니스 노래방"을 엄선해 소개하게 되었다.</p>
+      
+      <h2>여의도 비즈니스 노래방의 차별화된 시스템</h2>
+      <p>첫째, **품격이 다른 시설과 프라이버시:** 여의도 노래방들은 바이어나 고위 직급의 비즈니스맨들이 많이 이용하기 때문에 실내 음향 시설과 독립 방음 시스템이 서울 최고 수준으로 세련되어 있다. 중요한 비즈니스 미팅과 자연스러운 유대감 형성을 돕기에 최적화되어 있다.</p>
+      <p>둘째, **프로 마인드의 세심한 마인드:** 일하는 도우미나 직원들 또한 접대의 중요성을 잘 알고 있어, 매너 있고 교양 있게 자리를 맞춘다. 불쾌하거나 무례한 행동으로 판이 깨질 걱정이 전혀 없다.</p>
+      <p>셋째, **사전 주대 약속 및 확실한 정찰제:** 우리는 계산서에 투명하게 약속된 주대와 TC 외에는 현장에서 절대 임의 요금을 요구하지 못하게 실장들과 칼같이 약속되어 있다. 안심하고 즐기셔도 좋다.</p>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>세트 구분</th>
+            <th>구체적 세트 제공 내역</th>
+            <th>정찰 가격 (VAT 별도)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>기본 A세트 (위스키+안주)</td>
+            <td>골든블루/윈저 12년 1병 + 안주 1개 + 맥주 5캔 무료 세팅</td>
+            <td>220,000원 ~</td>
+          </tr>
+          <tr>
+            <td>프리미엄 B세트 (17년 고급 세팅)</td>
+            <td>골든블루 17년 1병 + 특수 과일안주 + 음료 무제한</td>
+            <td>320,000원 ~</td>
+          </tr>
+          <tr>
+            <td>테이블 TC (60분당)</td>
+            <td>시간당 1인 시간비용 고정</td>
+            <td>110,000원</td>
+          </tr>
+          <tr>
+            <td>룸 사용 정액</td>
+            <td>인원 무관 정액 룸비</td>
+            <td>30,000원</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>브로가 보증하는 실패 없는 예약 팁</h2>
+      <p>여의도에서 성공적으로 2차를 세팅하기 위해서는 무조건 **"공식 다이렉트 대표번호"**를 알아두어야 한다. 중간 브로커 대행망 말고 실제 현장에서 손님 에스코트하는 실장 다이렉트 번호인 `010-6279-0862`로 예약하는 것이 중간 마진 빠진 착한 가격과 시간 서비스를 넉넉하게 챙길 수 있는 최고 비결이다. 내가 직접 내 가오를 걸고 형님들이 기분 좋게 2차를 마칠 수 있도록 확실하게 뒷바라지해 주겠다.</p>
+    </main>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3 class="widget-title">📞 24시간 투명 상담 및 예약</h3>
+        <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:16px;">여의도의 양심 가이드! 정직한 주대로 실패 없는 원샷 방 배정을 완료해 드립니다.</p>
+        <a href="tel:010-6279-0862" class="phone-btn" style="width:100%; justify-content:center;">010-6279-0862</a>
       </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
+      <div class="widget">
+        <h3 class="widget-title">💬 여의도 형님들의 내돈내산 리얼 후기</h3>
+        
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-name">샛강역증권맨</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-content">"여의도에서 팀 회식 후 2차 갈 곳 급히 수소문하다 전화드렸는데 룸 시설 완전 화려하고 정찰제 주대 칼같이 맞춰줘서 부장님이 너무 만족해하셨습니다."</p>
+        </div>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-name">빌딩소유주</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-content">"바이어들 모시고 조용하게 사업 관련 이야기 나누며 마셨는데 프라이버시 완벽 보장되고 파트너분들이 교양 있게 대화 나눠줘서 아주 흡족했습니다."</p>
+        </div>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 마포 셔츠룸 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 마포 셔츠룸 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-name">마포자영업자</span>
+            <span class="review-stars">★★★★☆</span>
+          </div>
+          <p class="review-content">"혼술하러 조용히 가봤는데 가식 없고 양심적인 분위기로 서비스 많이 챙겨주셔서 단골 삼았습니다. 📞010-6279-0862 꼭 저장해두세요."</p>
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+    </aside>
   </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <p><strong>여의도 노래방 내돈내산</strong> | 대표문의: <a href="tel:010-6279-0862" style="color:var(--accent);">010-6279-0862</a></p>
+        <p style="font-size:0.8rem; margin-top:8px; opacity:0.7;">본 정보는 청소년 유해 매체물로서 성인에 한해서만 정보 이용 권한이 부여됩니다.</p>
+      </div>
+      <p>&copy; 2026 여의도 노래방 내돈내산. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
