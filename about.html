@@ -1,368 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <title>여의도 노래방 내돈내산 정보 - 씨게뜨면 무조건 여기</title>
-    <meta name="description" content="여의도 노래방 진짜 내돈내산 정보. 형들이 인정한 개꿀팁, 가격, 위치, 시설 다 까발림. 전화 010-6279-0862 지금 바로 예약 ㄱㄱ">
-    <meta name="keywords" content="여의도 노래방, 여의도 노래방 추천, 여의도 내돈내산 노래방, 여의도 노래방 가격, 여의도 노래방 후기, 여의도 노래방 정보, 여의도 노래방 예약">
-    <link rel="canonical" href="https://t3b05-yd-kb-real.vercel.app/info">
-    <meta property="og:title" content="여의도 노래방 내돈내산 정보 - 형들이 간증함">
-    <meta property="og:description" content="여의도 노래방 진짜 내돈내산 정보. 가격, 위치, 시설 다 까발림. 010-6279-0862 예약 ㄱㄱ">
-    <meta property="og:url" content="https://t3b05-yd-kb-real.vercel.app/info">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="여의도 노래방 내돈내산 정보 - 형들이 간증함">
-    <meta name="twitter:description" content="여의도 노래방 진짜 내돈내산 정보. 가격, 위치, 시설 다 까발림. 010-6279-0862 예약 ㄱㄱ">
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        /* === TYPOGRAPHY === */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #fff;
-            margin-bottom: 0.5em;
-        }
-        h1 {
-            font-size: clamp(2rem, 6vw, 4rem);
-            text-shadow: 4px 4px 0 #ff00ff, 8px 8px 0 #00ffff;
-        }
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            border-left: 6px solid #ff00ff;
-            padding-left: 0.5em;
-        }
-        h3 {
-            font-size: 1.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        /* === COLOR === */
-        .accent {
-            color: #ff00ff;
-        }
-        .bg-accent {
-            background: #ff00ff;
-            color: #0a0a0a;
-        }
-        .border-accent {
-            border: 3px solid #ff00ff;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75em 1.5em;
-            background: #0a0a0a;
-            color: #ff00ff;
-            border: 3px solid #ff00ff;
-            text-transform: uppercase;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #ff00ff;
-            color: #0a0a0a;
-            box-shadow: 0 0 20px #ff00ff;
-        }
-        /* === LAYOUT === */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        /* === NAVIGATION === */
-        nav {
-            background: #111;
-            padding: 1rem 0;
-            border-bottom: 3px solid #ff00ff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #ff00ff;
-            text-decoration: none;
-        }
-        nav .menu {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        nav .menu li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-        nav .menu li a:hover {
-            color: #ff00ff;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger span {
-            width: 30px;
-            height: 3px;
-            background: #ff00ff;
-            transition: all 0.3s;
-        }
-        /* === HERO === */
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
-            border-bottom: 3px solid #00ffff;
-        }
-        .hero h1 {
-            margin-bottom: 0.5rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        /* === SECTIONS === */
-        section {
-            padding: 3rem 0;
-        }
-        .card {
-            background: #1a1a1a;
-            padding: 2rem;
-            border: 3px solid #333;
-            margin-bottom: 2rem;
-            transition: border-color 0.2s;
-        }
-        .card:hover {
-            border-color: #ff00ff;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        /* === FAQ === */
-        .faq-item {
-            border-bottom: 1px solid #333;
-            padding: 1rem 0;
-        }
-        .faq-item h3 {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-item h3::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: #ff00ff;
-        }
-        .faq-item.active h3::after {
-            content: '-';
-        }
-        .faq-item .answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        .faq-item.active .answer {
-            max-height: 500px;
-        }
-        /* === FOOTER === */
-        footer {
-            background: #111;
-            padding: 2rem 0;
-            border-top: 3px solid #ff00ff;
-            text-align: center;
-        }
-        footer .tel-link {
-            display: inline-block;
-            font-size: 2rem;
-            font-weight: 800;
-            color: #ff00ff;
-            text-decoration: none;
-            border: 3px solid #ff00ff;
-            padding: 0.5em 1em;
-            margin-top: 1rem;
-            transition: all 0.2s;
-        }
-        footer .tel-link:hover {
-            background: #ff00ff;
-            color: #0a0a0a;
-        }
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-        /* === RESPONSIVE 768 === */
-        @media (max-width: 768px) {
-            nav .menu {
-                display: none;
-                flex-direction: column;
-                background: #111;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                padding: 1rem;
-                gap: 1rem;
-            }
-            nav .menu.open {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-        /* === EXTRA BRUTALIST === */
-        .brutal-border {
-            border: 4px solid #fff;
-            box-shadow: 8px 8px 0 #ff00ff;
-        }
-        .neon-glow {
-            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-raw-concrete">
+<title>여의도 노래방 내돈내산 가이드: 가격과 실체 분석</title>
+<meta name="description" content="여의도 노래방 방문을 고민 중인가요? 단순히 가격표만 보지 마세요. 내돈내산 경험을 바탕으로 비용을 결정짓는 핵심 항목과 상황별 업체 선택 기준을 분석했습니다.">
+<meta name="keywords" content="여의도 노래방, 여의도 노래방 내돈내산, 여의도 유흥 비용, 여의도 회식 노래방">
+<link rel="canonical" href="https://yeouido-song-guide.program-school.online/about.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "여의도 노래방 내돈내산 가이드",
+  "description": "여의도 지역 노래방 선택의 핵심 기준과 비용 구조 분석."
+}
+</script>
+<style>
+:root { --bg-color: #f4f4f4; --text-color: #1a1a1a; --accent-color: #ff3e00; }
+body { background: var(--bg-color); color: var(--text-color); font-family: sans-serif; margin: 0; padding: 20px; }
+.t-item-y2e2 { border-bottom: 4px solid var(--text-color); padding-bottom: 20px; }
+.x-img-dj6x { width: 100%; height: 300px; background: #ccc; margin: 20px 0; }
+h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: -2px; }
+section { margin: 40px 0; padding: 20px; border: 2px solid #333; }
+.m-ico-oou6 { font-weight: bold; color: var(--accent-color); }
+.n-ico-x24g { font-style: italic; }
+.m-side-hl5a { background: #eee; padding: 15px; }
+footer { margin-top: 50px; font-size: 0.8rem; }
+@media (max-width: 768px) { h1 { font-size: 2rem; } }
+</style>
+  <meta property="og:url" content="https://yeouido-song-guide.program-school.online/about.html">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">여의도 노래방</a>
-            <ul class="menu" id="nav-menu">
-                <li><a href="/">홈</a></li>
-                <li><a href="/info">정보</a></li>
-                <li><a href="/review">후기</a></li>
-                <li><a href="/price">가격</a></li>
-                <li><a href="/location">위치</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<header class="t-item-y2e2">
+<nav><strong>여의도 노래방 정보 센터 | <a href="/">홈</a> | <a href="/guide">이용 가이드</a> | <a href="/about">분석 보고서</a></strong></nav>
+<h1>여의도 노래방, 실체를 파악하라</h1>
+</header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>여의도 노래방 내돈내산 정보</h1>
-            <p>형이 직접 갔다 와서 다 까발린다. 가격, 위치, 시설, 팁까지.<br>이거 보면 다른 데 갈 이유 없음.</p>
-            <a href="tel:010-6279-0862" class="btn">전화 예약 010-6279-0862</a>
-        </div>
-    </section>
+<section>
+<h2>가격 구조의 비밀: 무엇이 비용을 결정하는가</h2>
+<p>여의도라는 지역적 특수성은 노래방 비용에도 그대로 투영됩니다. 단순히 시간당 요금만을 생각한다면 현장에서 당황하기 일쑤입니다. 이곳의 비용은 기본 룸 차지를 시작으로 주류 세트 구성, 그리고 인원수에 따른 '세팅비'라는 명목의 추가 금액으로 복잡하게 얽혀 있습니다.</p>
+<p>특히 금요일 저녁이나 연말 시즌에는 '피크 타임 할증'이 암묵적으로 적용되는 경우가 많습니다. 사전에 전화로 문의할 때는 반드시 '부가세 별도'인지, '카드 결제 시 추가 수수료'가 발생하는지 명확히 확인해야 합니다. 이는 단순히 바가지를 피하는 것을 넘어, 예산 내에서 합리적인 유흥을 즐기기 위한 필수 절차입니다.</p>
+</section>
 
-    <section>
-        <div class="container">
-            <h2>📍 위치 & 접근성</h2>
-            <div class="grid-2">
-                <div class="card border-accent">
-                    <h3>여의도 역 3번 출구 도보 3분</h3>
-                    <p>진짜 역에서 내려서 걸어오는데 3분이면 도착함. 여의도에서 이렇게 가까운 노래방 찾기 힘들다. 주변에 맛집도 많고, 회식 후에 오기 딱 좋음.</p>
-                    <p><strong>주소:</strong> 서울 영등포구 여의도동 23-7, 2층</p>
-                </div>
-                <div class="card border-accent">
-                    <h3>주차 가능? ㅇㅇ 가능</h3>
-                    <p>건물 지하 주차장 있음. 근데 주말엔 자리 없을 수 있으니 대중교통 추천. 아니면 전화해서 물어보셈. 010-6279-0862</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section>
+<h2>상황별 업체 선택: 회식인가, 접대인가</h2>
+<p>방문 목적에 따라 선택해야 할 노래방의 유형이 완전히 달라집니다. 비즈니스 접대가 목적이라면 주차 시설이 완비되고 서비스의 질이 보장되는 대형 업소를 고려해야 합니다. 이때는 단순히 비용보다는 방의 크기와 방음 상태, 그리고 서빙 인력의 숙련도를 우선순위에 두어야 합니다.</p>
+<p>반면 직장 동료들과의 가벼운 회식이나 친목 도모가 목적이라면 가성비를 따지는 것이 현명합니다. 여의도 공원 근처나 국회의사당 인근의 중소 규모 노래방들은 시간 연장 서비스를 유연하게 제공하는 곳이 많습니다. 서비스 시간은 업체마다 다르니 예약 시 '서비스 타임'의 범위를 사전에 협의하는 것이 좋습니다.</p>
+</section>
 
-    <section>
-        <div class="container">
-            <h2>💰 가격 정보 (형이 직접 확인)</h2>
-            <div class="card">
-                <h3>평일 2시간 — 30,000원</h3>
-                <p>주류 포함이면 50,000원. 근데 주류는 편의점에서 사서 드셈. 여기는 음료 반입 가능! 개꿀팁임.</p>
-            </div>
-            <div class="card">
-                <h3>주말 2시간 — 40,000원</h3>
-                <p>주말이라도 이 가격이면 싼 거임. 여의도 물가 생각하면 ㄹㅇ 혜자. 4시간 이상이면 할인 들어가니까 전화 문의 ㄱㄱ</p>
-            </div>
-            <div class="card">
-                <h3>코인 노래방? ㄴㄴ, 여긴 룸 시스템</h3>
-                <p>코인 노래방보다 훨씬 낫다. 방음도 잘 되고, 마이크 음질도 좋음. 돈 값한다.</p>
-            </div>
-        </div>
-    </section>
+<section>
+<h2>반드시 확인해야 할 체크리스트</h2>
+<p>시설의 노후도는 노래방 선택의 가장 큰 변수입니다. 겉모습은 번지르르해도 내부 환기 시스템이 제대로 작동하지 않거나, 소방 안전 설비가 미흡한 곳은 피해야 합니다. <span class="m-ico-oou6">내돈내산 경험상, 가장 먼저 확인해야 할 것은 비상구 위치와 화장실의 청결 상태입니다.</span></p>
+<p>또한, 주류의 정품 여부와 안주 세트의 품질도 간과해서는 안 됩니다. 냉동 제품을 단순히 데워내는 수준인지, 아니면 직접 조리한 메뉴를 제공하는지에 따라 만족도가 극명하게 갈립니다. 메뉴판에 가격이 명시되지 않은 업소는 피하는 것이 가장 안전한 선택이라는 점을 명심하십시오.</p>
+</section>
 
-    <section>
-        <div class="container">
-            <h2>🎤 시설 & 장비</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>마이크</h3>
-                    <p>슈어 SM58 수준. 아니 실제로 SM58임. 음질 개좋음. 목 푸는 것도 필요 없음.</p>
-                </div>
-                <div class="card">
-                    <h3>스피커</h3>
-                    <p>JBL 12인치 2개. 저음부터 고음까지 다 살려줌. EDM 틀면 방이 떨림.</p>
-                </div>
-                <div class="card">
-                    <h3>방음</h3>
-                    <p>옆 방 소리 거의 안 들림. 형들 마음껏 질러도 됨. 밤 10시 이후는 좀 조용히 하셈.</p>
-                </div>
-                <div class="card">
-                    <h3>곡 수</h3>
-                    <p>최신곡부터 90년대 명곡까지 다 있음. TJ 미디어 시스템. 5만 곡 정도?</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<aside class="m-side-hl5a">
+<p class="n-ico-x24g">주의: 본 정보는 특정 업체의 홍보가 아니며, 현장의 상황은 매일 변동될 수 있습니다. 모든 결정은 이용자의 몫입니다.</p>
+</aside>
 
-    <section>
-        <div class="container">
-            <h2>💡 형만 아는 꿀팁</h2>
-            <div class="card">
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 1rem;">✔ <strong>예약은 꼭 전화로!</strong> 온라인 예약 없음. 010-6279-0862 이 번호로 문자나 전화 ㄱㄱ</li>
-                    <li style="margin-bottom: 1rem;">✔ <strong>음료 반입 가능</strong> 편의점에서 사서 들어가셈. 냉장고 있음.</li>
-                    <li style="margin-bottom: 1rem;">✔ <strong>평일 오후 6시 전에 가면 더 싸다.</strong> 할인 시간대 있음. 전화로 물어보셈.</li>
-                    <li style="margin-bottom: 1rem;">✔ <strong>회식 단체는 10명 이상이면 방 2개로 나눠주는데,</strong> 가격 negotiation 가능! 사장님한테 형들이 왔다고 하셈.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>❓ 자주 묻는 질문</h2>
-            <div class="faq-item active">
-                <h3>노래방에 주차장 있어요?</h3>
+<footer>
+<p>&copy; 2024 여의도 노래방 정보 분석 프로젝트. 무단 전재 및 재배포 금지.</p>
+</footer>
 </body>
 </html>
